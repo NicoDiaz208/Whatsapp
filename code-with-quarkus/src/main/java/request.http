@@ -1,0 +1,51 @@
+GET http://localhost:50000//hello-resteasy
+
+###
+
+POST http://localhost:50000/api/Room
+Content-Type:application/json
+
+{"roomId": "Hallo"}
+
+###
+
+GET http://localhost:50000/api/Room/all
+
+###
+
+POST http://localhost:50000/api/Room/addMessage/Hallo
+Content-Type: application/json
+
+{
+  "message": "Hallo jemand da?",
+  "author": "Nico",
+  "date": "2021-03-20T12:54:21.933Z"
+}
+
+###
+
+POST http://localhost:50000/api/Usr
+Content-Type: application/json
+
+{
+  "username" : "Nico",
+  "password" : "Test"
+}
+
+###
+
+GET http://localhost:50000/api/Usr/all
+
+###
+
+POST http://localhost:50000/api/Room/addUsrToRoom/
+Content-Type: application/json
+
+{
+  "username" : "Nico",
+  "roomId" : "Hallo"
+}
+
+###
+
+GET http://localhost:50000/api/Usr/Rooms/Nico
