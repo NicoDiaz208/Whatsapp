@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>group-detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <div class="container">
+    <div *ngFor="let msg of messageList" class="message left">
+      <div class="msg-detail">
+        <div class="msg-info">
+          <p>{{msg.author}}</p>
+        </div>
+        <div class="msg-content">
+          <span class="triangle"></span>
+          <p class="line-breaker ">{{msg.message}}</p>
+        </div>
+        <div class="msg-time">
+          <p class="line-breaker">{{this.getTime(msg.date)}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+<ion-footer no-border>
+  <div class="input-wrap">
+    <ion-input placeholder="Enter your message!" [(ngModel)]="chatMessage" (keyup.enter)="sendMessage()"></ion-input>
+    <ion-button slot="end">Send</ion-button>
+  </div>
+</ion-footer>
