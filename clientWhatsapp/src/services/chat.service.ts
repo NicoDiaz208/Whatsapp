@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, Subject } from "rxjs";
 import { map } from "rxjs/operators";
 import { WebsocketService } from "./websocket.service";
-import {Message} from "../app/message";
+import {Message} from "../app/entities/message";
 
 const CHAT_URL = "ws://localhost:50000/chat/nicodiaz208";
 

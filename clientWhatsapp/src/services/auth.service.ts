@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { Storage } from '@ionic/storage-angular';
-import { User } from '../app/user';
+import {User} from '../app/entities/user';
 @Injectable({
   providedIn: 'root'
 })

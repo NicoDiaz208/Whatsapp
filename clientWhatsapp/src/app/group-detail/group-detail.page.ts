@@ -1,8 +1,8 @@
-import { Message } from '../message';
+import { Message } from '../entities/message';
 import { Component, OnInit } from '@angular/core';
 import { Router } from  '@angular/router';
 import { ChatService } from  '../../services/chat.service';
-import { User } from  '../user';
+import { User } from  '../entities/user';
 
 @Component({
   selector: 'app-group-detail',

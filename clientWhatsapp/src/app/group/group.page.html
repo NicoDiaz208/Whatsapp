@@ -1,13 +1,15 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>group</ion-title>
+    <ion-input [(ngModel)]="newRoomid"></ion-input>
+    <ion-button (click)="addRoom(this.newRoomid)">Add</ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item [routerLink]="['/group-detail']">
-      Nico
+    <ion-item *ngFor="let room of this.rooms" [routerLink]="['/group-detail']">
+      {{this.room.roomId}}
     </ion-item>
   </ion-list>
 </ion-content>
